@@ -1,0 +1,25 @@
+name: Dart Test
+
+on:
+  push:
+    branches:
+      - solution
+  pull_request:
+    branches:
+      - solution
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Dart
+        run: sudo apt-get install dart
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Run tests
+        run: dart test
