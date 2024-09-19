@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Dart
-        run: sudo apt-get install dart
+        run: sudo apt-get update && sudo apt-get install dart
 
       - name: Install dependencies
         run: dart pub get
