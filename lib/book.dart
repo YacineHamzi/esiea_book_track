@@ -3,7 +3,7 @@ import 'package:biblio_track/history.dart';
 
 class Book with History {
   String title;
-  String? author; // Auteur optionnel
+  String author; // Auteur optionnel
   bool isAvailable;
 
   Book(this.title, {this.author, this.isAvailable = true});
